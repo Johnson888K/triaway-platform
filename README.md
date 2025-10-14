@@ -2,6 +2,9 @@
 
 Main platform application for TriaWay (app.triaway.com) with full authentication and features.
 
+## Latest Update
+Build fixes applied - ready for deployment.
+
 ## Overview
 
 This is the main TriaWay platform where users can sign up, sign in, and access the dashboard and collaborative features.
