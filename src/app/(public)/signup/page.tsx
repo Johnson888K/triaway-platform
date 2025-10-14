@@ -6,7 +6,7 @@ import Link from "next/link"
 import { useAuth } from "@/components/auth/AuthProvider"
 import { Button } from "@/components/ui/button"
 import Logo from "@/components/Logo"
-import { Turnstile } from '@marsidev/react-turnstile'
+import { Turnstile, type TurnstileInstance } from '@marsidev/react-turnstile'
 
 export default function SignUpPage() {
   const [email, setEmail] = useState("")
@@ -16,7 +16,7 @@ export default function SignUpPage() {
   const [error, setError] = useState<string | null>(null)
   const [message, setMessage] = useState<string | null>(null)
   const [turnstileToken, setTurnstileToken] = useState<string | null>(null)
-  const turnstileRef = useRef<any>(null)
+  const turnstileRef = useRef<TurnstileInstance | null>(null)
   
   const { signUp } = useAuth()
   // const router = useRouter()
@@ -118,7 +118,6 @@ export default function SignUpPage() {
               onSuccess={setTurnstileToken}
               onError={() => setTurnstileToken(null)}
               onExpire={() => setTurnstileToken(null)}
-              theme="dark"
             />
           </div>
 

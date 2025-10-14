@@ -5,13 +5,11 @@ export function createClient() {
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
     {
-      auth: {
-        cookieOptions: {
-          domain: '.triaway.com',
-          path: '/',
-          sameSite: 'lax',
-          secure: true
-        }
+      cookieOptions: {
+        domain: '.triaway.com',
+        path: '/',
+        sameSite: 'lax',
+        secure: true
       }
     }
   )

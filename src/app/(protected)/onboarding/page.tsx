@@ -22,7 +22,7 @@ export default function OnboardingPage() {
         <div className="text-center mb-8">
           <Logo className="h-16 w-16 mx-auto mb-6" />
           <h1 className="text-3xl font-bold mb-2">Welcome to TriaWay!</h1>
-          <p className="text-zinc-400">Let's set up your profile to help you find your people.</p>
+          <p className="text-zinc-400">Let&apos;s set up your profile to help you find your people.</p>
         </div>
 
         <div className="bg-zinc-900 border border-white/10 rounded-2xl p-8">
@@ -31,7 +31,7 @@ export default function OnboardingPage() {
           <div className="space-y-6">
             <div>
               <label className="block text-sm font-medium mb-2">
-                What's your primary focus? (Optional)
+                What&apos;s your primary focus? (Optional)
               </label>
               <textarea
                 className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-white/30"
