@@ -3,7 +3,7 @@
 import { useState, useRef } from "react"
 // import { useRouter } from "next/navigation"
 import Link from "next/link"
-import { useAuth } from "@/components/auth/AuthProvider"
+// import { useAuth } from "@/components/auth/AuthProvider"
 import { Button } from "@/components/ui/button"
 import Logo from "@/components/Logo"
 import { Turnstile, type TurnstileInstance } from '@marsidev/react-turnstile'
@@ -18,7 +18,7 @@ export default function SignUpPage() {
   const [turnstileToken, setTurnstileToken] = useState<string | null>(null)
   const turnstileRef = useRef<TurnstileInstance | null>(null)
   
-  const { signUp } = useAuth()
+  // const { signUp } = useAuth()
   // const router = useRouter()
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -43,7 +43,8 @@ export default function SignUpPage() {
 
     setLoading(true)
 
-    const { error } = await signUp(email, password)
+    // const { error } = await signUp(email, password)
+    const error = new Error("Authentication temporarily disabled for debugging")
     
     if (error) {
       setError(error.message)

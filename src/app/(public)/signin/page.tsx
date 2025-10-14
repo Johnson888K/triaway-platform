@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { useRouter } from "next/navigation"
 import Link from "next/link"
-import { useAuth } from "@/components/auth/AuthProvider"
+// import { useAuth } from "@/components/auth/AuthProvider"
 import { Button } from "@/components/ui/button"
 import Logo from "@/components/Logo"
 
@@ -13,7 +13,7 @@ export default function SignInPage() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   
-  const { signIn } = useAuth()
+  // const { signIn } = useAuth()
   const router = useRouter()
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -21,7 +21,8 @@ export default function SignInPage() {
     setError(null)
     setLoading(true)
 
-    const { error } = await signIn(email, password)
+    // const { error } = await signIn(email, password)
+    const error = new Error("Authentication temporarily disabled for debugging")
     
     if (error) {
       setError(error.message)
