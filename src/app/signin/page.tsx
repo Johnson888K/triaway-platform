@@ -3,7 +3,6 @@
 import { useState } from "react"
 import { useRouter } from "next/navigation"
 import Link from "next/link"
-// import { useAuth } from "@/components/auth/AuthProvider"
 import { Button } from "@/components/ui/button"
 import Logo from "@/components/Logo"
 
