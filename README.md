@@ -5,6 +5,9 @@ Main platform application for TriaWay (app.triaway.com) with full authentication
 ## Latest Update
 Build fixes applied - ready for deployment.
 
+### Debug Status
+Temporarily disabled auth to resolve 500 errors - app should load landing page.
+
 ## Overview
 
 This is the main TriaWay platform where users can sign up, sign in, and access the dashboard and collaborative features.
